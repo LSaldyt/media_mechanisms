@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+
+import praw
+reddit = praw.Reddit('analysis_bot', user_agent='lsaldyt')
+all_subreddit = reddit.subreddit("all")
+for submission in all_subreddit.search("github.com", limit=5):
+    print(submission.title)
