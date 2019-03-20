@@ -1,8 +1,0 @@
-#!/usr/bin/env python3
-from twitter import *
-
-with open('twitter.secret') as infile:
-    api = Twitter(auth=OAuth(*infile.read().split()))
-
-results = api.search.tweets(q='nytimes.com')
-print(results['statuses'][0])
