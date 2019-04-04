@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+import matplotlib.pyplot as plt
+import seaborn           as sns
+import pandas            as ps
+
+data = ps.pivot_table(ps.read_csv('traffic_p.csv'), index=['Source'])
+data = data[['Reddit', 'Facebook', 'Twitter']]
+sns.heatmap(data)
+plt.show()
