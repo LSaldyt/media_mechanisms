@@ -1,12 +1,25 @@
 #!/usr/bin/env python3
-from reddit  import create as create_reddit
-from twitter import create as create_twitter
+from reddit_bot  import create as create_reddit
+from twitter_bot import create as create_twitter
 
 from sources import get_sources
 
-reddit_bot  = create_reddit()
-twitter_bot = create_twitter()
+def search_media(media, sources):
+    for name, source_data in sources.items():
+        url = source_data['URL']
+        for submedia in media:
+            print(submedia.search(submedia, q=url))
 
-sources = get_sources()
-print(sources)
+def main():
 
+    reddit_bot  = create_reddit()
+    twitter_bot = create_twitter()
+
+    media = [reddit_bot, twitter_bot]
+    sources = get_sources()
+
+
+    search_media(media, sources)
+
+if __name__ == '__main__':
+    main()

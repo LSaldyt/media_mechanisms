@@ -1,6 +1,6 @@
-Name,URL,Bias,Reliability,Notes
-NYT,nytimes.com,left,good,I wonder if bias and reliability could be sourced from another study? I'm certain someone has ranked popular sources!!
-Associated Press,ap.org,neutral,good,"I'm using this to rank sources, but it's totally subjective: "
+Name,URL,Bias,Reliability,
+NYT,nytimes.com,left,good,
+Associated Press,ap.org,neutral,good,
 Wall Street Journal,wsj.com,right,good,
 Patribotics,patribotics.blog,left,bad,
 Infowars,infowars.com,right,bad,

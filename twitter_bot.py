@@ -3,7 +3,7 @@ from twitter import *
 from media import Media
 
 def search(client, q, limit=100):
-    return client.search.tweets(q=q)['statuses']
+    return client.client.search.tweets(q=q)['statuses']
 
 def create():
     with open('twitter.secret') as infile:
