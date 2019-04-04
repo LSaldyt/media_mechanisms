@@ -3,7 +3,11 @@ import matplotlib.pyplot as plt
 import seaborn           as sns
 import pandas            as ps
 
-data = ps.pivot_table(ps.read_csv('traffic_p.csv'), index=['Source'])
-data = data[['Reddit', 'Facebook', 'Twitter']]
-sns.heatmap(data)
-plt.show()
+def heatmap(filename):
+    data = ps.read_csv(filename).set_index('Source')
+    data = data[['Reddit', 'Facebook', 'Twitter']]
+    sns.heatmap(data)
+    plt.show()
+
+for filename in ['fake', 'right', 'left', 'center']:
+    heatmap(filename + '.csv')
