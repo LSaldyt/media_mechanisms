@@ -9,6 +9,4 @@ def heatmap(filename):
     sns.heatmap(data)
     plt.show()
 
-#for filename in ['fake', 'right', 'left', 'center', 'ultraproper']:
-#    heatmap(filename + '.csv')
-heatmap('ultraproper.csv')
+heatmap('normalized.csv')
