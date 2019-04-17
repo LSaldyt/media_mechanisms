@@ -1,26 +1,19 @@
-,URL,Nov '18 Total,Facebook,Twitter,Reddit,Other
+Source,URL,Total,Facebook,Twitter,Reddit,Other
 New York Times,nytimes.com,"37,595,700",0.4388,0.3185,0.1156,0.1271
 MSNBC,msnbc.com,3659760,0.5600,0.2015,0.2056,0.0329
 CNN,cnn.com,"29,702,700",0.4652,0.2439,0.1888,0.1021
 Huffington Post,huffpost.com,6200480,0.7022,0.1174,0.0909,0.0895
-,,,,,,
 Wall Street Journal,wsj.com,"6,399,000",0.4119,0.3898,0.0390,0.1593
-,,,,,,
-The Washington Times,washingtontimes.com,2779200,0.5944,0.2445,0.1295,0.0316
-Fox News,foxnews.com,17777600,0.5669,0.1380,0.1658,0.1293
+Washington Times,washingtontimes.com,2779200,0.5944,0.2445,0.1295,0.0316
+Fox,foxnews.com,17777600,0.5669,0.1380,0.1658,0.1293
 Daily Wire,dailywire.com,8948660,0.8181,0.1296,0.0315,0.0208
-,,,,,,
 Associated Press,ap.org,"3,804,840",0.2837,0.4496,0.1065,0.1602
 Bloomberg,bloomberg.com,10288080,0.2631,0.3128,0.1134,0.3107
 The Economist,economist.com,2931960,0.5329,0.2296,0.0582,0.1793
 The Guardian,theguardian.com,33700650,0.4882,0.2304,0.1836,0.0978
-,,,,,,
-,,,,,,
 Alternet,alternet.org,719865,0.6063,0.2096,0.1202,0.0639
-,,,,,,
 Patribotics,patribotics.blog,68970,0.1146,0.8654,0.0113,0.0087
 National Enquirer,nationalenquirer.com,49010,0.0797,0.6264,0.1969,0.0970
 Worldtruth,worldtruth.tv,38712,0.5386,0.3058,0,0.1556
-Infowars,infowars.com,"1,153,350",0.3907,0.3887,0.0899,0.1307
+InfoWars,infowars.com,"1,153,350",0.3907,0.3887,0.0899,0.1307
 The Blaze,theblaze.com,2960400,0.25,0.25,0.25,0.25
-NRA,nra.org,1540,0.2824,0.5378,0,0.1798
