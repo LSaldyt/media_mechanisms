@@ -25,10 +25,10 @@ def combine():
         return row
     data = get_traffic()
     data = data.apply(combiner, axis=1)
-    data = data.set_index('Source')
+    #data = data.set_index('Source')
     return data
 
-def plot():
+def topology():
     f, ax = plt.subplots(figsize=(8,8))
     ax.set_aspect('equal')
     #data = combine()
@@ -61,9 +61,53 @@ def plot():
     ax.text(35, 55,  "Right", size=16, color=red)
     ax.text(-15, 75, "Neutral", size=16, color=purple)
 
-    plt.title('Topology of The Political Media Landscapce')
+    plt.title('Topology of The Political Media Landscape')
     plt.xlabel('Bias')
     plt.ylabel('Objectivity')
     plt.show()
 
-plot()
+def sample():
+    sns.set(style='whitegrid')
+    original_data = pandas.read_csv('bias.csv')
+    data = combine()
+
+    #sns.jointplot(x, y)
+    original_data['Bias'] = original_data['Bias'].astype(float)
+    original_data['Objectivity'] = original_data['Objectivity'].astype(float)
+    data['Bias'] = data['Bias'].astype(float)
+    data['Objectivity'] = data['Objectivity'].astype(float)
+    data['Total'] = data['Total'].astype(float)
+    sns.scatterplot(x='Bias', y='Objectivity', data=original_data, color=(0.8, 0.8, 0.8, 0.1))
+    sns.scatterplot(x='Bias', y='Objectivity', data=data, hue='Bias', size='Total', sizes=(20, 500))
+    for i, row in data.iterrows():
+        plt.text(row[8], row[7], row[0], size=16)
+
+    #plt.title('Topology of The Political Media Landscapce')
+    plt.xlabel('Bias')
+    plt.ylabel('Objectivity')
+    plt.show()
+
+def plot():
+    sns.set(style='darkgrid')
+    original_data = pandas.read_csv('bias.csv')
+    data = combine()
+
+    #sns.jointplot(x, y)
+    original_data['Bias'] = original_data['Bias'].astype(float)
+    original_data['Objectivity'] = original_data['Objectivity'].astype(float)
+    data['Bias'] = data['Bias'].astype(float)
+    data['Objectivity'] = data['Objectivity'].astype(float)
+    data['Total'] = data['Total'].astype(float)
+    sns.scatterplot(x='Bias', y='Objectivity', data=original_data, color=(0.8, 0.8, 0.8, 0.1))
+    sns.scatterplot(x='Bias', y='Objectivity', data=data, hue='Bias', size='Total', sizes=(20, 500))
+    for i, row in data.iterrows():
+        plt.text(row[8], row[7], row[0], size=16)
+
+    #plt.title('Topology of The Political Media Landscapce')
+    plt.xlabel('Bias')
+    plt.ylabel('Objectivity')
+    plt.show()
+
+#topology()
+sample()
+#plot()
